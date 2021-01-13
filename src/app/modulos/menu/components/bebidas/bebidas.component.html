@@ -1,0 +1,12 @@
+<!-- <h1>DRINKS</h1> -->
+<div class="d-flex">
+    <input class="form-control me-2" type="text" placeholder="Buscar Nombre" aria-label="Search">
+    <button class="btn btn-success" type="button" style="padding-left: 10px; padding-right: 10px;">Buscar</button>
+  </div>
+
+<div class="card-columns">
+
+    <app-card-drink *ngFor="let producto of productos" [producto]="producto"></app-card-drink>
+
+           
+</div>

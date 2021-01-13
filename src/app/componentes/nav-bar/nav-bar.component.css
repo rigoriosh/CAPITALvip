@@ -8,13 +8,21 @@
   }
 
   .dropdown-menu {
-      background-color: transparent;
+      background-color: #564c64;
       text-align: center;
   }
+
+  .dropdown-menu :hover {
+    background-color: #4481eb;    
+}
   
   nav {
-    height: 10vh;
+    height: 5vh;
     background: #564c64;
+  }
+
+  .miNav{
+    display: flex;
   }
   
   .nav-links {
@@ -28,9 +36,10 @@
   }
   
   .nav-links li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 16px;
+    font-size: x-large;
   }
   
   .landing {
@@ -50,11 +59,12 @@
     .line {
       width: 30px;
       height: 3px;
-      background: black;
+      background: white;
       margin: 5px;
     }
     nav {
       position: relative;
+      
     }
   
     .hamburger {
