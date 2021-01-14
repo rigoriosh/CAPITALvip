@@ -1,0 +1,44 @@
+<div class="animated fadeIn faster" style="margin-top: 60px;">    
+    <div class="row">
+        <div class="col text-right">
+            <button type="button" class="btn btn-dark" routerLink="/home/admin/addDrinks">
+                <i class="fa fa-arrow-left"></i>
+                Return
+            </button>
+        </div>
+    </div>
+    
+    <form action="">
+        <div class="form-group">
+            <label for="">ID by Firebase</label>
+            <input type="text" class="form-control" placeholder="Firebase ID" disabled="disabled">
+            <small class="form-text text-muted">Este campo es auto generado</small>
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" placeholder="Drink name" required>
+        </div>
+        <div class="form-group">
+            <label for="">Category</label>
+            <input type="text" class="form-control" placeholder="Drink category" required>
+        </div>
+        <div class="form-group">
+            <label for="">Description</label>
+            <input type="text" class="form-control" placeholder="Drink Description" required>
+        </div>
+        <div class="form-group">
+            <label for="">Price</label>
+            <input type="number" class="form-control" placeholder="Drink Price" required>
+        </div>
+        <div class="form-group">
+            <label for="">Quantity</label>
+            <input type="number" class="form-control" placeholder="Drink Quantity" required>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-dark w-25" type="submit">
+                <i class="fa fa-save"></i>
+                Save
+            </button>
+        </div>
+    </form>
+</div>

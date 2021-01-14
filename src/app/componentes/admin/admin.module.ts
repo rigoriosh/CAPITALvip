@@ -3,15 +3,17 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminRoutingModule } from './admin-routing.module';
 
 import { AdminComponent } from './componentes/admin/admin.component';
-import { Prueba1Component } from './componentes/prueba1/prueba1.component';
-import { Prueba2Component } from './componentes/prueba2/prueba2.component';
+import { AddDrinksComponent } from './componentes/add-drinks/add-drinks.component';
+import { AddFoodsComponent } from './componentes/add-foods/add-foods.component';
+import { NewdrinkComponent } from './componentes/newdrink/newdrink.component';
 
 
 @NgModule({
     declarations: [
-        Prueba1Component,
-        Prueba2Component,
-        AdminComponent
+        AdminComponent,
+        AddDrinksComponent,
+        AddFoodsComponent,
+        NewdrinkComponent
     ],
     imports: [
         AdminRoutingModule,

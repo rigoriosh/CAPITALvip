@@ -5,15 +5,19 @@
   outline: none;
 }
 
+/* .card{
+  background-color: transparent !important;
+} */
+
 .card-img-top{
-  width: 70% !important;
+  width: 90% !important;
 }
 
 .cardProducto{    
     border-radius: 103px;
     width: 71%;
     align-items: center;
-    border-radius: 50px;   
+    border-radius: 30px;   
 }
 
 

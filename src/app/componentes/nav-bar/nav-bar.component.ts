@@ -6,14 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  navLinks = false;
-  constructor() { }
-
-  ngOnInit(): void {
+  navLinks: boolean;
+  constructor() {
+    this.navLinks  = false;
   }
 
-  changeHamburger(): void{
-    this.navLinks = !this.navLinks;
+  ngOnInit(): void {
+    this.toogleHamburger();
+  }
+
+  toogleHamburger(): void{
+    const navbarItems = document.querySelectorAll('.navbar-nav>li');
+    navbarItems.forEach(navbarItem => {
+      navbarItem.addEventListener('click', () => {
+        const navbar = document.querySelector('.navbar-collapse');
+        if (navbar != null) {navbar.classList.remove('show'); }
+      });
+    });
   }
 
 }
