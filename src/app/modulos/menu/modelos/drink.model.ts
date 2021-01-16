@@ -7,6 +7,7 @@
     descripcion: string;
     backgroud: string;
     nombre: string;
+    cantidad: number;
 
     constructor(){
         this.id = 0;
@@ -16,6 +17,7 @@
         this.descripcion = '';
         this.backgroud = '';
         this.nombre = '';
+        this.cantidad = 0;
     }
 }
 

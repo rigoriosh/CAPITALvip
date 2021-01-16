@@ -22,36 +22,49 @@
 
     <table class="table table-sm table-striped table-dark mt-3">
         <thead>
-          <tr>
-            <th scope="col">id</th>
+          <tr>            
             <th scope="col">Name</th>
             <th scope="col">Price</th>
-            <th scope="col">Description</th>
+            <!-- <th scope="col">Description</th> -->
+            <th scope="col">Quantity</th>
+            <th scope="col">Actions</th>            
           </tr>
         </thead>
-        <tbody>
-          <tr  class="table-active">
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+        <tbody >
+          <tr  class="table-active" *ngFor="let drink of drinks; let i=index">
+            <th scope="row">{{drink.nombre}}</th>
+            <td>{{drink.precio}}</td>
+            <!-- <td>{{drink.descripcion}}</td> -->
+            <td>{{drink.cantidad}}</td>
+            <td>
+              <button class="btn btn-info mr-1 btn-sm" [routerLink]="['drink/', drink.id]">
+                <i class="fa fa-pen"></i>                
+              </button>
+              <button class="btn btn-danger btn-sm">
+                <i class="fa fa-trash"></i>                
+              </button>
+            </td>
           </tr>        
         </tbody>
       </table>
 
-      <div class="aler alert-warning text-center mt-3">
-        <h4 class="alert-heading">Whitout Registers</h4>
-        <p>
-            <i class="fa fa-exclamation fa-2x"></i>
-        </p>        
-    </div>
-
-      <div class="aler alert-primary text-center mt-3">
+      <ng-container *ngIf="!drinks; else elseTemplate">
+        <div class="aler alert-warning text-center mt-3" ng-if>
+          <h4 class="alert-heading">Whitout Registers</h4>
+          <p>
+              <i class="fa fa-exclamation fa-2x"></i>
+          </p>        
+        </div>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <div class="aler alert-primary text-center mt-3">
           <h4 class="alert-heading">Loading</h4>
           <p>
               <i class="fa fa-sync-alt fa-spin fa-2x"></i>
           </p>
           <p class="mb-0">White please</p>
       </div>
+      </ng-template>
+      
     
 </div>

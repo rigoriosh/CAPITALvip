@@ -6,6 +6,8 @@ import { AdminComponent } from './componentes/admin/admin.component';
 import { AddDrinksComponent } from './componentes/add-drinks/add-drinks.component';
 import { AddFoodsComponent } from './componentes/add-foods/add-foods.component';
 import { NewdrinkComponent } from './componentes/newdrink/newdrink.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -17,10 +19,14 @@ import { NewdrinkComponent } from './componentes/newdrink/newdrink.component';
     ],
     imports: [
         AdminRoutingModule,
-        SharedModule
+        SharedModule,
+        FormsModule,
+        CommonModule
     ],
     providers: []
 })
 export class AdminModule{
+
+   
 
 }

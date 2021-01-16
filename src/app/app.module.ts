@@ -10,6 +10,7 @@ import { AutenticacionComponent } from './componentes/autenticacion/autenticacio
 import { HomeComponent } from './componentes/home/home.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,7 +24,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

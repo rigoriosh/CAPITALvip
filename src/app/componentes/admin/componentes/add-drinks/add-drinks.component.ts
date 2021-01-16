@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DrinksService } from '../../services/drinks.service';
+import { DrinkModel } from '../../../../modulos/menu/modelos/drink.model';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-add-drinks',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddDrinksComponent implements OnInit {
 
-  constructor() { }
+  drinks: any;
+  a = [];
+
+  constructor(private drinksService: DrinksService) { }
 
   ngOnInit(): void {
+    this.getDrinks();
   }
+
+  getDrinks(): any{
+
+    this.drinksService.getDrinks()
+      .subscribe((resp: any) => this.drinks = resp);
+
+  }
+
 
 }

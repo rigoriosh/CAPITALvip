@@ -8,31 +8,31 @@
         </div>
     </div>
     
-    <form action="">
+    <form (ngSubmit) = "guardar(f)" #f="ngForm">
         <div class="form-group">
             <label for="">ID by Firebase</label>
-            <input type="text" class="form-control" placeholder="Firebase ID" disabled="disabled">
+            <input type="text" class="form-control" placeholder="Firebase ID" disabled="disabled" [(ngModel)]="drink.id" name="id">
             <small class="form-text text-muted">Este campo es auto generado</small>
         </div>
         <div class="form-group">
             <label for="">Name</label>
-            <input type="text" class="form-control" placeholder="Drink name" required>
+            <input type="text" class="form-control" placeholder="Drink name" required [(ngModel)]="drink.nombre" name="nombre" required>
         </div>
         <div class="form-group">
             <label for="">Category</label>
-            <input type="text" class="form-control" placeholder="Drink category" required>
+            <input type="text" class="form-control" placeholder="Drink category" required [(ngModel)]="drink.categoria" name="categoria">
         </div>
         <div class="form-group">
             <label for="">Description</label>
-            <input type="text" class="form-control" placeholder="Drink Description" required>
+            <input type="text" class="form-control" placeholder="Drink Description" required [(ngModel)]="drink.descripcion" name="descripcion">
         </div>
         <div class="form-group">
             <label for="">Price</label>
-            <input type="number" class="form-control" placeholder="Drink Price" required>
+            <input type="number" class="form-control" placeholder="Drink Price" required [(ngModel)]="drink.precio" name="precio">
         </div>
         <div class="form-group">
             <label for="">Quantity</label>
-            <input type="number" class="form-control" placeholder="Drink Quantity" required>
+            <input type="number" class="form-control" placeholder="Drink Quantity" required [(ngModel)]="drink.cantidad" name="cantidad">
         </div>
         <div class="form-group text-center">
             <button class="btn btn-dark w-25" type="submit">

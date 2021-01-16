@@ -17,7 +17,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/1.png',
         descripcion: 'la tradicional',
-        backgroud: '#b8242d'
+        backgroud: '#b8242d',
+        cantidad: 30
       },
       {
         id: 2,
@@ -26,7 +27,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/2.png',
         descripcion: 'hgfghf',
-        backgroud: '#417edc'
+        backgroud: '#417edc',
+        cantidad: 30
       },
       {
         id: 3,
@@ -35,7 +37,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/3.png',
         descripcion: '',
-        backgroud: '#cc4607'
+        backgroud: '#cc4607',
+        cantidad: 30
       },
       {
         id: 4,
@@ -44,7 +47,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/4.png',
         descripcion: '',
-        backgroud: '#5a82b6'
+        backgroud: '#5a82b6',
+        cantidad: 30
       },
       {
         id: 5,
@@ -53,7 +57,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/5.png',
         descripcion: '',
-        backgroud: '#3ba1a8'
+        backgroud: '#3ba1a8',
+        cantidad: 30
       },
       {
         id: 6,
@@ -62,7 +67,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/6.png',
         descripcion: '',
-        backgroud: '#c9c2b8'
+        backgroud: '#c9c2b8',
+        cantidad: 30
       },
       {
         id: 7,
@@ -71,7 +77,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/7.png',
         descripcion: '',
-        backgroud: '#ccdf32'
+        backgroud: '#ccdf32',
+        cantidad: 30
       },
       {
         id: 8,
@@ -80,7 +87,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/8.png',
         descripcion: '',
-        backgroud: '#4aabd1'
+        backgroud: '#4aabd1',
+        cantidad: 30
       },
       {
         id: 9,
@@ -89,7 +97,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/9.png',
         descripcion: '',
-        backgroud: '#d63938'
+        backgroud: '#d63938',
+        cantidad: 30
       },
       {
         id: 10,
@@ -98,7 +107,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/10.png',
         descripcion: '',
-        backgroud: '#838088'
+        backgroud: '#838088',
+        cantidad: 30
       },
       {
         id: 11,
@@ -107,7 +117,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/11.png',
         descripcion: '',
-        backgroud: '#016ec6'
+        backgroud: '#016ec6',
+        cantidad: 30
       },
       {
         id: 12,
@@ -116,7 +127,8 @@ export class MenuService {
         precio: 3000,
         imagen: 'assets/images/products/12.png',
         descripcion: '',
-        backgroud: '#d4d8e1'
+        backgroud: '#d4d8e1',
+        cantidad: 30
       }
     ];
   }
