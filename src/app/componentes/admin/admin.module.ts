@@ -8,6 +8,9 @@ import { AddFoodsComponent } from './componentes/add-foods/add-foods.component';
 import { NewdrinkComponent } from './componentes/newdrink/newdrink.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
+import { ColorPickerModule } from 'ngx-color-picker';
+
 
 
 @NgModule({
@@ -15,18 +18,16 @@ import { CommonModule } from '@angular/common';
         AdminComponent,
         AddDrinksComponent,
         AddFoodsComponent,
-        NewdrinkComponent
+        NewdrinkComponent,
+        NgDropFilesDirective
     ],
     imports: [
         AdminRoutingModule,
         SharedModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        ColorPickerModule
     ],
     providers: []
 })
-export class AdminModule{
-
-   
-
-}
+export class AdminModule{}

@@ -1,2 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; margin: 0px; background-color: #3a6deb;}
+
+
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }

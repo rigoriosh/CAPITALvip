@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "capitalvip-3ec1e": {
+      "hosting": {
+        "rokola": [
+          "capitalvip-3ec1e"
+        ]
+      }
+    }
+  }
+}

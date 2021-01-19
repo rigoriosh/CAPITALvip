@@ -20,7 +20,7 @@
 
 
 
-    <table class="table table-sm table-striped table-dark mt-3">
+    <table class="table table-sm table-striped table-dark mt-3 animate__headShake" *ngIf="!loading && !thereDrinks">
         <thead>
           <tr>            
             <th scope="col">Name</th>
@@ -40,7 +40,7 @@
               <button class="btn btn-info mr-1 btn-sm" [routerLink]="['drink/', drink.id]">
                 <i class="fa fa-pen"></i>                
               </button>
-              <button class="btn btn-danger btn-sm">
+              <button class="btn btn-danger btn-sm" (click)="deleteDrink(drink, i)" >
                 <i class="fa fa-trash"></i>                
               </button>
             </td>
@@ -48,23 +48,23 @@
         </tbody>
       </table>
 
-      <ng-container *ngIf="!drinks; else elseTemplate">
-        <div class="aler alert-warning text-center mt-3" ng-if>
-          <h4 class="alert-heading">Whitout Registers</h4>
+      
+        <div class="aler alert-warning text-center mt-3 animate__bounce" *ngIf="thereDrinks">
+          <h4 class="alert-heading">Whitout Drinks in your stock</h4>
           <p>
               <i class="fa fa-exclamation fa-2x"></i>
           </p>        
         </div>
-      </ng-container>
-      <ng-template #elseTemplate>
-        <div class="aler alert-primary text-center mt-3">
+      
+      
+        <div class="aler alert-primary text-center mt-3" *ngIf="loading && !thereDrinks">
           <h4 class="alert-heading">Loading</h4>
           <p>
               <i class="fa fa-sync-alt fa-spin fa-2x"></i>
           </p>
           <p class="mb-0">White please</p>
       </div>
-      </ng-template>
+      
       
     
 </div>

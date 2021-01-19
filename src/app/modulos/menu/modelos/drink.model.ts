@@ -1,23 +1,16 @@
 
  export class DrinkModel{
-    id: number;
-    categoria: string;
-    precio: number;
+    id: number | undefined;
+    categoria: string | undefined;
+    precio: number | undefined;
     imagen: string;
-    descripcion: string;
-    backgroud: string;
-    nombre: string;
-    cantidad: number;
+    descripcion: string | undefined;
+    backgroud: string | undefined;
+    nombre: string | undefined;
+    cantidad: number | undefined;
 
     constructor(){
-        this.id = 0;
-        this.categoria = '';
-        this.precio = 0;
         this.imagen = '';
-        this.descripcion = '';
-        this.backgroud = '';
-        this.nombre = '';
-        this.cantidad = 0;
     }
 }
 

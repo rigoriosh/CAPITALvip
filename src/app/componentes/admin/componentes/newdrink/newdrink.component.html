@@ -34,6 +34,26 @@
             <label for="">Quantity</label>
             <input type="number" class="form-control" placeholder="Drink Quantity" required [(ngModel)]="drink.cantidad" name="cantidad">
         </div>
+        <div class="col-md-4">
+            
+            <!-- <h3>Seleccione Archivo</h3> -->
+            <input [(colorPicker)]="drink.backgroud" placeholder="Slect Color" [style.background]="drink.backgroud"/>
+            <div appNgDropFiles (mouseSobre)="estaSobreElemento = $event" [archivos]="archivos"
+                [ngStyle]="{'background-color': drink.backgroud}"
+                [ngClass]="{'file-over': estaSobreElemento}" class="well drop-zone file-over">
+                <h4>Arraste aqui la imagen</h4>
+                <img *ngIf="archivos.length === 0" src="assets/images/drop-images.png" alt="">
+                <img *ngIf="archivos.length !== 0" [src]="archivos[0]">       
+                         
+            </div>
+            
+            <div>
+                
+                <!-- <input type="color" id="head" name="head" #a (change)="drink.backgroud = a.value"
+                       [value]="drink.backgroud">
+                <label for="head">Head</label> -->
+            </div>
+        </div>
         <div class="form-group text-center">
             <button class="btn btn-dark w-25" type="submit">
                 <i class="fa fa-save"></i>
