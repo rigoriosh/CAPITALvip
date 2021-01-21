@@ -1,18 +1,18 @@
+<!-- <div class=" position-fixed" style="margin-top: -4px;"> -->
+   
+        <button type="button" class="btn btn-dark btn-small btn-block position-fixed"
+            style="margin-top: -4px;" routerLink="/home/admin/addDrinks">
+            <i class="fa fa-arrow-left"></i> Return            
+        </button>
+   
+
 <div class="animated fadeIn faster" style="margin-top: 60px;">    
-    <div class="row">
-        <div class="col text-right">
-            <button type="button" class="btn btn-dark" routerLink="/home/admin/addDrinks">
-                <i class="fa fa-arrow-left"></i>
-                Return
-            </button>
-        </div>
-    </div>
-    
+        
     <form (ngSubmit) = "guardar(f)" #f="ngForm">
         <div class="form-group">
-            <label for="">ID by Firebase</label>
+            <label style="margin-top: 45px;">ID by Firebase</label>
             <input type="text" class="form-control" placeholder="Firebase ID" disabled="disabled" [(ngModel)]="drink.id" name="id">
-            <small class="form-text text-muted">Este campo es auto generado</small>
+            <small class="form-text ">this field is auto generated</small>
         </div>
         <div class="form-group">
             <label for="">Name</label>
@@ -34,16 +34,18 @@
             <label for="">Quantity</label>
             <input type="number" class="form-control" placeholder="Drink Quantity" required [(ngModel)]="drink.cantidad" name="cantidad">
         </div>
-        <div class="col-md-4">
-            
+        <div class="col-md-4" style="padding: 0px;">            
             <!-- <h3>Seleccione Archivo</h3> -->
-            <input [(colorPicker)]="drink.backgroud" placeholder="Slect Color" [style.background]="drink.backgroud"/>
-            <div appNgDropFiles (mouseSobre)="estaSobreElemento = $event" [archivos]="archivos"
+            <input [(colorPicker)]="drink.backgroud" placeholder="Select color" [style.background]="drink.backgroud"
+                style="width: 100%;"/>
+            <div
+                appNgDropFiles (mouseSobre)="estaSobreElemento = $event" [archivos]="archivos"
                 [ngStyle]="{'background-color': drink.backgroud}"
                 [ngClass]="{'file-over': estaSobreElemento}" class="well drop-zone file-over">
-                <h4>Arraste aqui la imagen</h4>
+                <p>Drag and drop image</p>
                 <img *ngIf="archivos.length === 0" src="assets/images/drop-images.png" alt="">
-                <img *ngIf="archivos.length !== 0" [src]="archivos[0]">       
+                <img *ngIf="archivos.length !== 0" [src]="archivos[0]">  
+                
                          
             </div>
             
@@ -54,7 +56,7 @@
                 <label for="head">Head</label> -->
             </div>
         </div>
-        <div class="form-group text-center">
+        <div class="form-group text-center mt-3 mb-5 pb-3">
             <button class="btn btn-dark w-25" type="submit">
                 <i class="fa fa-save"></i>
                 Save

@@ -5,9 +5,9 @@
       <p class="card-text">{{producto.descripcion}}</p>
       <h5>Precio: ${{producto.precio}}</h5>
       <p *ngIf="cantidad > 0">Cantidad: {{cantidad}}</p>        
-      <button type="button" class="btn btn-dark" style="margin-right: 5px;" (click)="cantidad = cantidad + 1"><i class="fas fa-plus" style="padding: 0px 5px 0px 5px;"></i></button>
-      <button type="button" class="btn btn-dark" style="margin-right: 5px;" (click)="cantidad = cantidad - 1" *ngIf="cantidad > 0"><i class="fas fa-minus" style="padding: 0px 5px 0px 5px;"></i></button>        
-      <button type="button" class="btn btn-dark"><i class="fas fa-shopping-cart" style="padding: 0px 5px 0px 5px;"></i></button>        
+      <button type="button" class="btn btn-dark" style="margin-right: 5px;" (click)="incrementar(1)"><i class="fas fa-plus" style="padding: 0px 5px 0px 5px;"></i></button>
+      <button type="button" class="btn btn-dark" style="margin-right: 5px;" (click)="incrementar(-1)" *ngIf="cantidad > 0"><i class="fas fa-minus" style="padding: 0px 5px 0px 5px;"></i></button>        
+      <!-- <button type="button" class="btn btn-dark"><i class="fas fa-shopping-cart" style="padding: 0px 5px 0px 5px;"></i></button>         -->
       
     </div>
   </div>

@@ -1,11 +1,40 @@
-<div style="margin-top: 56px;">
-    <h4>PEDIDOS PENDIENTES</h4>
+<div id="administrador" style="margin-top: 56px; padding: 0px !important;" class="text-center">
+        
+    <ng-container *ngIf="pedidos.length > 0; else sinPendientes">
+        <h4>PEDIDOS PENDIENTES</h4>        
+    </ng-container>
+    <ng-template #sinPendientes>
+        <h4>SIN PEDIDOS PENDIENTES</h4>
+    </ng-template>
+    
     <hr>
-    <div class="row">
-        <div class="col">
-            <button type="button" class="btn btn-outline-primary">
-                Agregar
-            </button>
+ 
+    <div class="card-">
+        <div class="card bg-info mb-3" *ngFor="let pedido of pedidos" >
+            <div *ngIf="!pedido.facturado">
+                         
+                    <div class="text-center"><h5> Pedido mesa: {{pedido.mesa}} <span><p>{{pedido.fecha | date:'medium'}}</p></span></h5> </div>
+                    <div class=" row card-header" *ngFor="let item of pedido.pedido" >
+                        
+                    <div class="col-8 text-center p-0" [ngStyle]="{'background-color': item.backgroud}">
+                        <div class="row justify-content-md-center" style="justify-content: center;">
+                            <img [src]="item.imagen" class="rounded" >
+                        </div>
+                        <div class="row text-center m-0" style="justify-content: center;"><h5> {{item.nombre}} </h5></div>
+                    </div>
+                    <div class="col  text-right p-0" [ngStyle]="{'background-color': item.backgroud}">
+                        <div class="row"><h5> Cantidad: {{item.cantidad}} </h5></div>
+                        <div class="row"><h5>Und: {{item.precio | currency:'CAD':'symbol-narrow':'.0-0'}} </h5></div>
+                    </div>
+                    
+                    </div>
+                    <div class="row text-right">                    
+                        <div class="col text-right"><h5>Total: {{pedido.total | currency:'CAD':'symbol-narrow':'.0-0'}}</h5></div>
+                    </div>
+                    <button type="button" class="btn btn-dark " *ngIf="!pedido.facturado" (click)="terminarPedido(pedido)">
+                        Entregado y cobrado
+                    </button>
+            </div>
         </div>
     </div>
 </div>

@@ -133,7 +133,4 @@ export class MenuService {
     ];
   }
 
-  getDrinks(){
-    return this.drinks;
-  }
 }

@@ -63,7 +63,7 @@ export class NewdrinkComponent implements OnInit {
       texto = 'creado';
     }
 
-    peticion.subscribe((resp: any) => {
+    peticion.subscribe((resp: any) => { 
       console.log(resp);
       Swal.fire({
         title: this.drink.nombre,

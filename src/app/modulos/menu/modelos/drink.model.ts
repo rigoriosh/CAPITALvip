@@ -5,7 +5,7 @@
     precio: number | undefined;
     imagen: string;
     descripcion: string | undefined;
-    backgroud: string | undefined;
+    backgroud = '';
     nombre: string | undefined;
     cantidad: number | undefined;
 
